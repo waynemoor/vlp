@@ -1,0 +1,2 @@
+# This file ensures the uploads directory is created
+# Subdirectories will be created automatically by the PHP scripts

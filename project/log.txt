@@ -1,0 +1,131 @@
+            COLORS
+Green + White + Neutral
+
+    Primary: Fresh green (#28A745 or #2ECC71)
+
+    Background: White (#FFFFFF)
+
+    Accent: Warm yellow (#FFC107) for highlights/buttons
+
+    Text: Dark charcoal gray (#222222)
+
+Green feels fresh, growth-oriented, and balanced.
+
+
+✅ Essential PHP Files for Your Project
+🔐 Authentication (Login/Register)
+File	Purpose
+login.php	User login page
+register.php	Student registration page
+logout.php	Ends user session
+auth_check.php	Include this in every page that needs login protection
+
+👤 User Dashboard / Role-Based Panels
+File	Purpose
+dashboard.php	General user landing page
+admin_dashboard.php	Admin panel
+student_dashboard.php	Student-specific dashboard
+lecturer_dashboard.php	Lecturer-specific dashboard
+📚 Modules & Materials
+
+File	Purpose
+upload_material.php	For lecturers to upload PDFs, videos, notes
+view_materials.php	For students to view/download materials
+assignments.php	Upload & manage assignments
+submit_assignment.php	Student assignment upload
+grades.php	View submitted grades
+
+🧑‍🏫 User Management (Admin)
+File	Purpose
+add_user.php	Admin adds users manually
+view_users.php	List of all users
+edit_user.php	Edit user info
+delete_user.php	Delete user from system
+
+🏫 Course and Module Management
+File	Purpose
+add_course.php	Add a new course (e.g., "Software Engineering")
+view_courses.php	List all courses
+add_module.php	Add a module under a course
+view_modules.php	View modules by course
+
+📅 Timetable and Notices
+File	Purpose
+timetable.php	Display timetable for students/lecturers
+add_notice.php	Admin or lecturer posts notice
+view_notices.php	Display all posted notices
+
+⚙️ System / Utility
+File	Purpose
+db_connect.php	Central DB connection file
+config.php	Config values (hostnames, session settings)
+functions.php	Shared reusable PHP functions
+error.php	Error display page
+index.php	Landing or redirect page (can go to login)
+📁 Suggested Folder Structure
+
+virtual-class/
+│
+├── auth/
+│   ├── login.php
+│   ├── logout.php
+│   ├── register.php
+│   └── auth_check.php
+│
+├── dashboard/
+│   ├── admin_dashboard.php
+│   ├── student_dashboard.php
+│   └── lecturer_dashboard.php
+│
+├── materials/
+│   ├── upload_material.php
+│   └── view_materials.php
+│
+├── assignments/
+│   ├── assignments.php
+│   ├── submit_assignment.php
+│   └── grades.php
+│
+├── courses/
+│   ├── add_course.php
+│   ├── view_courses.php
+│   ├── add_module.php
+│   └── view_modules.php
+│
+├── users/
+│   ├── add_user.php
+│   ├── view_users.php
+│   ├── edit_user.php
+│   └── delete_user.php
+│
+├── notices/
+│   ├── add_notice.php
+│   └── view_notices.php
+│
+├── includes/
+│   ├── db_connect.php
+│   ├── config.php
+│   └── functions.php
+│
+├── timetable.php
+├── index.php
+└── error.php
+
+
+Admin /
+├── auth/
+│   ├── login.php
+│   ├── logout.php
+│   └── session_check.php
+├── admin/
+│   ├── dashboard.php
+│   ├── add_student.php
+│   └── view_students.php
+├── students/
+│   └── dashboard.php
+├── includes/
+│   └── db_connect.php
+├── index.php
+└── error.php
+
+

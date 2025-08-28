@@ -1,0 +1,203 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3f2f1;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    width: 240px;
+    background-color: #0078D4;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: limegreen;
+    color: white;
+}
+.main {
+    flex-grow: 1;
+    padding: 30px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+header h1 {
+    font-size: 2em;
+    color: #333;
+}
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+section h2 {
+    color: #0078D4;
+    margin-bottom: 15px;
+}
+form input[type="file"],
+form input[type="text"],
+form textarea,
+form select {
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+form button {
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+form button:hover {
+    background-color: limegreen;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    display: block;
+    border-radius: 2px;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #0078D4;
+        width: 100%;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* style for the received assignments */
+/* Section styling */
+.receive-assignments {
+    padding: 2rem;
+    background-color: #f5f5f5; /* light gray background */
+    font-family: Arial, sans-serif;
+}
+
+.receive-assignments h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.receive-assignments p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+/* Table container for horizontal scroll */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Table styling */
+#assignments-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table header */
+#assignments-table thead {
+    background-color: #e0e0e0; /* grey header */
+}
+
+#assignments-table th {
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Table body */
+#assignments-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+#assignments-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* light grey stripe */
+}
+
+#assignments-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Table cells */
+#assignments-table td {
+    padding: 12px 16px;
+    color: #444;
+}
+
+/* Action buttons */
+#assignments-table td a,
+#assignments-table td button {
+    margin-right: 8px;
+    color: #1a73e8;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+#assignments-table td button {
+    color: #e53935;
+}
+
+#assignments-table td a:hover,
+#assignments-table td button:hover {
+    text-decoration: underline;
+}
+

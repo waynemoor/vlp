@@ -1,0 +1,249 @@
+/* Base Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f2f1;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Notice bar */
+.noticebar {
+  background-color: #0078D4;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.02);
+  z-index: -1;
+}
+
+/* Navbar */
+.menubar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 40px; /* if noticebar is shown */
+  border-bottom: 2px solid #0078D4;
+}
+
+.logo h2 {
+  margin: 0;
+  color: #0078D4;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+/* Active / current page nav link */
+.nav-links li a.active-link {
+  background-color: #0078D4;
+  color: white;
+  pointer-events: none;
+}
+
+.nav-links li a:hover:not(.active-link) {
+  background-color: #0078D4;
+  color: white;
+}
+
+/* Main Content (generic container) */
+.main-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.main-content h1,
+.main-content h2 {
+  color: #004578;
+}
+
+.main-content h1 {
+  margin-bottom: 10px;
+}
+
+.main-content h2 {
+  margin-top: 30px;
+}
+
+.main-content ul {
+  padding-left: 20px;
+}
+
+.main-content ul li {
+  margin: 8px 0;
+}
+
+/* Login Container */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.login-container {
+  background: white;
+  border: 3px solid #0078D4;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  padding: 30px 40px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-container h2 {
+  color: #0078D4;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Form Elements */
+label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #0078D4;
+  box-shadow: 0 0 5px #0078D4;
+}
+
+/* Button */
+button,
+.login-button {
+  background-color: #0078D4;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0,120,212,0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+button:hover,
+.login-button:hover {
+  background-color: #005a9e;
+  box-shadow: 0 8px 18px rgba(0,90,158,0.8);
+}
+
+/* Error Message */
+.error-message {
+  color: #c0392b;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  text-align: right;
+}
+
+.forgot-password a {
+  color: #0078D4;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: text-decoration 0.3s ease;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .login-container {
+    width: 90%;
+    padding: 25px 20px;
+  }
+  .menubar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links {
+    gap: 10px;
+  }
+}
+    footer {
+      background-color: #0078D4;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-top: 30px;
+    }
